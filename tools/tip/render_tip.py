@@ -6,7 +6,7 @@ Usage:  python3 tools/tip/render_tip.py CONFIG.json tips/YYYY-MM-DD.jpg
 Two layouts (key "type"):
 
 infographic – a summary grid ("10 habits ..."):
-  count      big number in the dark box, e.g. "10"
+  count      the number, shown inside the title in the accent colour, e.g. "10" → "10 הרגלים להצלחה"
   title      e.g. "הרגלים להצלחה"           (<= 3 words)
   chip       e.g. "אחרי ניתוח בריאטרי"      (<= 4 words)
   subtitle   one short line
@@ -158,10 +158,10 @@ def build(c):
         if not cols:
             sys.exit("infographic needs 6, 8, 9 or 10 items")
         hero = (f'<div class="hero"><div class="hero-main">{logo()}'
-                f'<div style="display:flex;align-items:center;gap:16px"><div class="count">{E(c["count"])}</div>'
-                f'<div style="display:flex;flex-direction:column;gap:8px;min-width:0"><div class="h1">{E(c["title"])}</div>'
-                f'<div class="chip" style="font-size:32px;background:{acc}">{E(c["chip"])}</div>'
-                f'<div class="sub">{E(c["subtitle"])}</div></div></div></div>{photo()}</div>')
+                f'<div style="display:flex;flex-direction:column;gap:10px;min-width:0">'
+                f'<div class="h1" style="font-size:60px"><span style="color:{acc}">{E(c["count"])}</span> {E(c["title"])}</div>'
+                f'<div class="chip" style="font-size:32px;background:#2F5A5C">{E(c["chip"])}</div>'
+                f'<div class="sub" style="font-size:21px">{E(c["subtitle"])}</div></div></div>{photo()}</div>')
         body = hero + bar(c["section"]) + cards(c["items"], cols, big=(cols <= 3)) + boxes(c) + bottom(c)
     elif c["type"] == "tip":
         if len(c["items"]) != 3:
