@@ -192,7 +192,7 @@ CHECK = """() => {
 }"""
 
 def main():
-    cfg, out = Path(sys.argv[1]), Path(sys.argv[2])
+    cfg, out = Path(sys.argv[1]).resolve(), Path(sys.argv[2]).resolve()
     c = json.loads(cfg.read_text(encoding="utf-8"))
     page = out.with_suffix(".html")
     page.parent.mkdir(parents=True, exist_ok=True)
