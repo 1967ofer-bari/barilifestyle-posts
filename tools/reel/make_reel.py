@@ -3,7 +3,8 @@
 Usage: python3 tools/reel/make_reel.py CONFIG.json OUT.mp4
 CONFIG keys: hook1, hook2, label, title, line1, line2, line3, closing,
 optional: url (default barilifestyle.com), image (path relative to repo root, default brand/hero-halo.jpg),
-music_variant (0-2, default 0). line1..line3 may contain <b>..</b>.
+mood (calm | warm | uplifting | energetic – see music.py; default calm),
+music_seed (default: the output file name, so every reel gets its own unique track). line1..line3 may contain <b>..</b>.
 Also writes OUT with .jpg extension: a 1080x1350 cover/feed frame for Facebook."""
 import html, json, pathlib, re, subprocess, sys, tempfile
 from playwright.sync_api import sync_playwright
@@ -38,7 +39,8 @@ with tempfile.TemporaryDirectory() as td:
             pg.screenshot(path=str(td / f"f{i:04d}.jpg"), type="jpeg", quality=92)
         b.close()
     wav = td / "m.wav"
-    subprocess.run([sys.executable, "-I", str(HERE / "music.py"), str(wav), str(D), str(cfg.get("music_variant", 0))], check=True)
+    mood = cfg.get("mood") or {"0": "calm", "1": "warm", "2": "uplifting"}.get(str(cfg.get("music_variant", 0)), "calm")
+    subprocess.run([sys.executable, "-I", str(HERE / "music.py"), str(wav), str(D), mood, str(cfg.get("music_seed", out.stem))], check=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(td / "f%04d.jpg"), "-i", str(wav),
                     "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
                     "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(out)], check=True)
