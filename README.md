@@ -11,3 +11,10 @@ BariLifestyle postes
   Every post gets its own unique track: the seed (default: output file name / post date) picks key, chords, melody,
   rhythm and tempo. Moods: calm (mindset, reflection, personal story), warm (story, community, products/services),
   uplifting (motivation, achievements, teasers), energetic (fitness, workouts, challenges).
+
+## tools/reel/site_reel.py – Saturday-night website video (from 21.11.2026)
+- `python3 tools/reel/site_reel.py site/configs/YYYY-MM-DD.json site/YYYY-MM-DD.mp4` – ~18-second 9:16 slideshow made ONLY
+  from images on barilifestyle.com (downloaded at render time), original music, closing card with the site address.
+  Also writes `site/YYYY-MM-DD.jpg` (1080x1350 closing card) for Facebook. Config keys are listed at the top of the script.
+- Published every Saturday at 20:30: Instagram gets the video ("קישור בביו"), Facebook gets the closing card with a
+  clickable link to the page (with utm_campaign=saturday_site).

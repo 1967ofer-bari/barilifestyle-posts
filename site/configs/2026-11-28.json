@@ -1,0 +1,39 @@
+{
+  "page": "https://barilifestyle.com/method/",
+  "mood": "calm",
+  "hook1": "למה הדיאטה נגמרת, וההרגל נשאר?",
+  "hook2": "כי השינוי מתחיל בראש.",
+  "hook_image": "brain-woman.jpg",
+  "slides": [
+    {
+      "images": [
+        "neuroplasticity.jpg"
+      ],
+      "fit": true,
+      "text": "המוח יודע <b>ללמוד הרגלים חדשים</b>"
+    },
+    {
+      "images": [
+        "pillars-sketch.jpg"
+      ],
+      "text": "שינה, תזונה, תנועה, נפש וקשרים – <b>הכול מחובר</b>",
+      "fit": true
+    },
+    {
+      "images": [
+        "statue-tall.jpg"
+      ],
+      "text": "מפסלים את עצמנו מחדש, <b>מתוך הדפוסים הישנים</b>"
+    },
+    {
+      "images": [
+        "ofer-psych.jpg"
+      ],
+      "text": "שיטת BariMF – <b>פסיכולוגיה התנהגותית ליום־יום</b>"
+    }
+  ],
+  "cta": "כל השיטה מחכה לכם באתר",
+  "cta_image": "selfie.jpg",
+  "caption_ig": "למה הדיאטה נגמרת, וההרגל נשאר? כי שינוי אמיתי מתחיל בראש.\nשיטת BariMF מחברת פסיכולוגיה התנהגותית לחיי היום־יום.\nואצלכם, איזה הרגל הכי קשה לשנות? 👇\n👈 כל השיטה באתר: קישור בביו · barilifestyle.com\n#BariMF #פסיכולוגיההתנהגותית #ניתוחבריאטרי #BariLifestyle #הרגלים",
+  "caption_fb": "למה הדיאטה נגמרת, וההרגל נשאר? כי שינוי אמיתי מתחיל בראש.\nשיטת BariMF מחברת פסיכולוגיה התנהגותית לחיי היום־יום.\nואצלכם, איזה הרגל הכי קשה לשנות? 👇\n👈 כל השיטה באתר: https://barilifestyle.com/method/?utm_source=facebook&utm_medium=social&utm_campaign=saturday_site\n#BariMF #פסיכולוגיההתנהגותית #ניתוחבריאטרי #BariLifestyle #הרגלים"
+}

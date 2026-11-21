@@ -1,0 +1,47 @@
+{
+  "page": "https://barilifestyle.com/about/",
+  "mood": "warm",
+  "hook1": "ב־2017 שנינו עברנו ניתוח בריאטרי.",
+  "hook2": "הניתוח היה רק ההתחלה.",
+  "hook_image": "selfie.jpg",
+  "slides": [
+    {
+      "images": [
+        "eti-before.jpg",
+        "eti-after.jpg"
+      ],
+      "tags": [
+        "לפני",
+        "היום"
+      ],
+      "text": "<b>אתי</b> – לפני הניתוח והיום"
+    },
+    {
+      "images": [
+        "ofer-before.jpg",
+        "ofer-after.jpg"
+      ],
+      "tags": [
+        "לפני",
+        "היום"
+      ],
+      "text": "<b>עופר</b> – לפני הניתוח והיום"
+    },
+    {
+      "images": [
+        "sculptor.jpg"
+      ],
+      "text": "את השינוי האמיתי <b>בונים בראש</b>, צעד אחר צעד"
+    },
+    {
+      "images": [
+        "custom-about.jpg"
+      ],
+      "text": "היום אנחנו מלווים אחרים <b>באותה הדרך</b>"
+    }
+  ],
+  "cta": "הסיפור המלא שלנו באתר",
+  "cta_image": "selfie.jpg",
+  "caption_ig": "ב־2017 שנינו עברנו ניתוח בריאטרי, ומהר מאוד הבנו שהניתוח הוא רק ההתחלה.\nאת השינוי האמיתי בנינו בראש, צעד אחר צעד. מזה נולדה שיטת BariMF.\nומה היה הרגע שלכם, שבו הבנתם שהניתוח הוא רק ההתחלה? 👇\n👈 הסיפור המלא שלנו באתר: קישור בביו · barilifestyle.com\n#ניתוחבריאטרי #שרוולקיבה #BariLifestyle #BariMF #לפניואחרי",
+  "caption_fb": "ב־2017 שנינו עברנו ניתוח בריאטרי, ומהר מאוד הבנו שהניתוח הוא רק ההתחלה.\nאת השינוי האמיתי בנינו בראש, צעד אחר צעד. מזה נולדה שיטת BariMF.\nומה היה הרגע שלכם, שבו הבנתם שהניתוח הוא רק ההתחלה? 👇\n👈 הסיפור המלא שלנו באתר: https://barilifestyle.com/about/?utm_source=facebook&utm_medium=social&utm_campaign=saturday_site\n#ניתוחבריאטרי #שרוולקיבה #BariLifestyle #BariMF #לפניואחרי"
+}

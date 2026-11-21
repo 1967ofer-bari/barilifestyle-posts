@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Heebo;src:url(fonts/heebo-hebrew-400-normal.woff2);font-weight:400}
+@font-face{font-family:Heebo;src:url(fonts/heebo-hebrew-700-normal.woff2);font-weight:700}
+@font-face{font-family:Heebo;src:url(fonts/heebo-hebrew-800-normal.woff2);font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;font-family:Heebo,sans-serif;background:#1E4A55}
+.scene{position:absolute;inset:0;opacity:0;overflow:hidden}
+.bg{position:absolute;inset:-60px;background-size:cover;background-position:center;filter:blur(38px) brightness(.55)}
+/* hook */
+#hook .bg{filter:blur(10px) brightness(.38)}
+#hook .wrap{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 80px;text-align:center}
+#hook .a{color:#FFFDF8;font-weight:800;font-size:104px;line-height:1.15;text-shadow:0 6px 30px rgba(0,0,0,.5)}
+#hook .b{color:#E3C48E;font-weight:800;font-size:88px;line-height:1.2;margin-top:60px;text-shadow:0 6px 30px rgba(0,0,0,.5)}
+/* slides */
+.frame{position:absolute;left:60px;right:60px;top:170px;height:1250px;display:flex;justify-content:center;align-items:center;gap:28px}
+.frame .ph{position:relative;height:100%;flex:1;border-radius:34px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:8px solid #FFFDF8;background:#FFFDF8}
+.frame .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.frame.fit .ph{flex:none;height:auto;width:100%}
+.frame.fit .ph img{height:auto;object-fit:contain}
+.tag{position:absolute;bottom:26px;right:26px;background:#B8925A;color:#fff;font-weight:800;font-size:46px;padding:10px 34px;border-radius:50px}
+.cap{position:absolute;left:70px;right:70px;top:1470px;color:#FFFDF8;font-weight:800;font-size:68px;line-height:1.25;text-align:center;text-shadow:0 4px 20px rgba(0,0,0,.45)}
+.cap b{color:#E3C48E}
+.logo{position:absolute;top:50px;left:60px;width:230px;border-radius:14px}
+/* cta */
+#cta{background:linear-gradient(170deg,#1E4A55 0%,#2F6B5E 100%)}
+#cta .wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:330px;text-align:center}
+#cta .lg{width:360px;border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+#cta .photo{width:470px;height:470px;border-radius:50%;overflow:hidden;border:12px solid #B8925A;margin-top:60px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+#cta .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+#cta .q{color:#FFFDF8;font-weight:800;font-size:82px;line-height:1.2;margin-top:60px;padding:0 70px}
+#cta .url{margin-top:50px;background:#FFFDF8;color:#1E4A55;font-weight:800;font-size:60px;padding:24px 64px;border-radius:80px;direction:ltr}
+#cta .bio{color:#E3C48E;font-weight:700;font-size:48px;margin-top:34px}
+.bar{position:absolute;bottom:0;right:0;height:12px;background:#B8925A}
+</style></head><body>
+<div id="root"></div>
+<div class="bar" id="bar"></div>
+<script>
+const C = __CONFIG__;
+const HOOK=2.6, SL=3.0, CTA=4.0, X=0.35;
+const D = HOOK + C.slides.length*SL + CTA;
+const $=id=>document.getElementById(id);
+const clamp=x=>Math.max(0,Math.min(1,x));
+const ease=x=>1-Math.pow(1-clamp(x),3);
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/&lt;(\/?)b&gt;/g,'<$1b>');
+let h=`<div class="scene" id="hook"><div class="bg" style="background-image:url('${C.hook_image}')"></div>
+<div class="wrap"><div class="a" id="ha">${esc(C.hook1)}</div><div class="b" id="hb">${esc(C.hook2)}</div></div></div>`;
+C.slides.forEach((s,i)=>{
+  const imgs = s.images.map((src,j)=>`<div class="ph"><img src="${src}">${s.tags&&s.tags[j]?`<div class="tag">${esc(s.tags[j])}</div>`:''}</div>`).join('');
+  h+=`<div class="scene" id="s${i}"><div class="bg" style="background-image:url('${s.images[0]}')"></div>
+  <img class="logo" src="${C.logo}"><div class="frame${s.fit?' fit':''}" id="f${i}">${imgs}</div>
+  <div class="cap" id="c${i}">${esc(s.text)}</div></div>`;
+});
+h+=`<div class="scene" id="cta"><div class="wrap"><img class="lg" id="lg" src="${C.logo}">
+<div class="photo" id="ph"><img src="${C.cta_image}"></div>
+<div class="q" id="q">${esc(C.cta)}</div><div class="url" id="u">${esc(C.url||'barilifestyle.com')}</div>
+<div class="bio" id="bio">🔗 קישור בביו</div></div></div>`;
+$('root').innerHTML=h;
+function rev(el,t,start,dur=0.5,dy=50){const k=ease((t-start)/dur);el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`;}
+function scene(el,t,a,b){const fi=a<0?1:clamp((t-a)/X),fo=clamp((b-t)/X);el.style.opacity=Math.min(fi,fo);}
+window.DURATION=D;
+window.render=function(t,noBio){
+  scene($('hook'),t,-1,HOOK+X/2);
+  rev($('ha'),t,0.05,0.45,60); rev($('hb'),t,1.0,0.45,60);
+  C.slides.forEach((s,i)=>{
+    const a=HOOK+i*SL; scene($('s'+i),t,a-X/2,a+SL+X/2);
+    const z=1+0.06*clamp((t-a)/SL); $('f'+i).style.transform=`scale(${z})`;
+    rev($('c'+i),t,a+0.35,0.45,40);
+  });
+  const a=HOOK+C.slides.length*SL; scene($('cta'),t,a-X/2,99);
+  rev($('lg'),t,a+0.1,0.5,30);
+  const pk=ease((t-a-0.3)/0.6); $('ph').style.opacity=pk; $('ph').style.transform=`scale(${0.85+0.15*pk})`;
+  rev($('q'),t,a+0.8); rev($('u'),t,a+1.3,0.5,30); rev($('bio'),t,a+1.7,0.5,20);
+  if(noBio) $('bio').style.display='none';
+  $('bar').style.width=(100*clamp(t/D))+'%';
+};
+window.render(0);
+</script></body></html>
