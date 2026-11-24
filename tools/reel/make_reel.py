@@ -25,7 +25,7 @@ for k in ["hook1", "hook2", "label", "title", "line1", "line2", "line3", "closin
     tpl = tpl.replace("{{%s}}" % k, esc(cfg[k], k.startswith("line")))
 if cfg.get("image"):
     tpl = tpl.replace("../../brand/hero-halo.jpg", "../../" + cfg["image"])
-page = HERE / "_render.html"
+page = HERE / f"_render_{out.stem}.html"
 page.write_text(tpl, encoding="utf-8")
 
 with tempfile.TemporaryDirectory() as td:

@@ -1,0 +1,40 @@
+{
+  "page": "https://barilifestyle.com/articles/",
+  "mood": "calm",
+  "hook1": "הניתוח משנה את הקיבה.",
+  "hook2": "לא את הראש.",
+  "hook_image": "custom-ofer-think.jpg",
+  "slides": [
+    {
+      "images": [
+        "why-humans.jpg"
+      ],
+      "fit": true,
+      "text": "למה רק בני אדם <b>סובלים מהשמנה?</b>"
+    },
+    {
+      "images": [
+        "scale-health.jpg"
+      ],
+      "fit": true,
+      "text": "מאזנים את הבריאות: <b>רפואה ואורח חיים</b>"
+    },
+    {
+      "images": [
+        "body-clocks.jpg"
+      ],
+      "text": "גוף, נפש <b>ותבניות התנהגות</b>"
+    },
+    {
+      "images": [
+        "steps-body-soul.jpg"
+      ],
+      "fit": true,
+      "text": "מאמרים מהשטח <b>ומהמחקר האקדמי</b>"
+    }
+  ],
+  "cta": "כל המאמרים באתר",
+  "cta_image": "custom-ofer-think.jpg",
+  "caption_ig": "הניתוח משנה את הקיבה, לא את הראש.\nבאתר מחכים מאמרים של עופר – מהניסיון האישי, מהשטח ומהמחקר האקדמי, כולל ממצאי מחקר הדוקטורט בקרב 94 מנותחים בישראל על מה מנבא הצלחה לטווח ארוך.\nעל איזו שאלה של \"היום שאחרי\" הייתם רוצים שנכתוב? 👇\n👈 למאמרים: קישור בביו · barilifestyle.com\n#ניתוחבריאטרי #שרוולקיבה #מחקר #BariLifestyle #BariMF",
+  "caption_fb": "הניתוח משנה את הקיבה, לא את הראש.\nבאתר מחכים מאמרים של עופר – מהניסיון האישי, מהשטח ומהמחקר האקדמי, כולל ממצאי מחקר הדוקטורט בקרב 94 מנותחים בישראל על מה מנבא הצלחה לטווח ארוך.\nעל איזו שאלה של \"היום שאחרי\" הייתם רוצים שנכתוב? 👇\n👈 למאמרים: https://barilifestyle.com/articles/?utm_source=facebook&utm_medium=social&utm_campaign=saturday_site\n#ניתוחבריאטרי #שרוולקיבה #מחקר #BariLifestyle #BariMF"
+}

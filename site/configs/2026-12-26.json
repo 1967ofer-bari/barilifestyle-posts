@@ -1,0 +1,40 @@
+{
+  "page": "https://barilifestyle.com/services/",
+  "mood": "warm",
+  "hook1": "כלים שנשארים איתכם.",
+  "hook2": "גם הרבה אחרי הניתוח.",
+  "hook_image": "hero-couple.jpg",
+  "slides": [
+    {
+      "images": [
+        "prod-book1.jpg"
+      ],
+      "fit": true,
+      "text": "<b>קצר ולעניין</b> – לחזור לשגרה אחרי הניתוח"
+    },
+    {
+      "images": [
+        "prod-book2.jpg"
+      ],
+      "fit": true,
+      "text": "<b>המצפן לאריכות ימים</b> – איזון בין גוף לנפש"
+    },
+    {
+      "images": [
+        "prod-workbook.jpg"
+      ],
+      "fit": true,
+      "text": "<b>ערכת האימון</b> – תרגול יומיומי של חוסן"
+    },
+    {
+      "images": [
+        "course-cover.jpg"
+      ],
+      "text": "<b>הקורס הדיגיטלי</b> – 36 שיעורים בקצב שלכם"
+    }
+  ],
+  "cta": "כל המוצרים באתר",
+  "cta_image": "hero-couple.jpg",
+  "caption_ig": "שנה חדשה מתקרבת. מה תיקחו איתכם אליה?\nבאתר מחכים הספרים, ערכת האימון לחוסן מנטלי והקורס הדיגיטלי – כלים לתרגל בבית, בקצב שלכם, גם הרבה אחרי הניתוח.\nאיזה כלי הכי היה עוזר לכם עכשיו? 👇\n👈 כל המוצרים: קישור בביו · barilifestyle.com\n#BariLifestyle #BariMF #ניתוחבריאטרי #חוסןמנטלי #שנהחדשה",
+  "caption_fb": "שנה חדשה מתקרבת. מה תיקחו איתכם אליה?\nבאתר מחכים הספרים, ערכת האימון לחוסן מנטלי והקורס הדיגיטלי – כלים לתרגל בבית, בקצב שלכם, גם הרבה אחרי הניתוח.\nאיזה כלי הכי היה עוזר לכם עכשיו? 👇\n👈 כל המוצרים: https://barilifestyle.com/services/?utm_source=facebook&utm_medium=social&utm_campaign=saturday_site\n#BariLifestyle #BariMF #ניתוחבריאטרי #חוסןמנטלי #שנהחדשה"
+}

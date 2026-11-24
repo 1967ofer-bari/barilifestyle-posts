@@ -1,0 +1,38 @@
+{
+  "page": "https://barilifestyle.com/quiz/",
+  "mood": "uplifting",
+  "hook1": "מה פרופיל החוסן שלכם?",
+  "hook2": "8 שאלות. כ־2 דקות.",
+  "hook_image": "hero-couple.jpg",
+  "slides": [
+    {
+      "images": [
+        "couple-walk.jpg"
+      ],
+      "text": "חוסן הוא לא כוח רצון. <b>הוא הרגל</b>"
+    },
+    {
+      "images": [
+        "statue-desk.jpg"
+      ],
+      "fit": true,
+      "text": "אין תשובות נכונות – <b>רק מה שקרוב אליכם</b>"
+    },
+    {
+      "images": [
+        "about-couple.jpg"
+      ],
+      "text": "ובסוף: <b>הכלים שהכי מתאימים לכם</b>"
+    },
+    {
+      "images": [
+        "hero-halo.jpg"
+      ],
+      "text": "מתוך ארגז הכלים <b>של אתי ועופר</b>"
+    }
+  ],
+  "cta": "בדקו את החוסן שלכם",
+  "cta_image": "selfie.jpg",
+  "caption_ig": "מה פרופיל החוסן שלכם?\nשאלון קצר באתר: 8 שאלות, כ־2 דקות, בלי תשובות נכונות או לא נכונות. בסוף מקבלים את הכלים מארגז הכלים שלנו שהכי מתאימים לכם.\nעשיתם? ספרו לנו בתגובות איזה כלי יצא לכם 👇\n👈 לשאלון: קישור בביו · barilifestyle.com\n#חוסןמנטלי #ניתוחבריאטרי #BariMF #BariLifestyle #פרופילהחוסן",
+  "caption_fb": "מה פרופיל החוסן שלכם?\nשאלון קצר באתר: 8 שאלות, כ־2 דקות, בלי תשובות נכונות או לא נכונות. בסוף מקבלים את הכלים מארגז הכלים שלנו שהכי מתאימים לכם.\nעשיתם? ספרו לנו בתגובות איזה כלי יצא לכם 👇\n👈 לשאלון: https://barilifestyle.com/quiz/?utm_source=facebook&utm_medium=social&utm_campaign=saturday_site\n#חוסןמנטלי #ניתוחבריאטרי #BariMF #BariLifestyle #פרופילהחוסן"
+}

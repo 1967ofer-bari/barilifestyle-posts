@@ -43,7 +43,7 @@ with tempfile.TemporaryDirectory() as td:
     c["cta_image"] = img(cfg["cta_image"])
     c["logo"] = (REPO / "brand" / "logo.jpg").as_uri()
     c["slides"] = [dict(s, images=[img(n) for n in s["images"]]) for s in cfg["slides"]]
-    page = HERE / "_site_render.html"
+    page = HERE / f"_site_render_{out.stem}.html"
     page.write_text((HERE / "site_reel.html").read_text(encoding="utf-8")
                     .replace("__CONFIG__", json.dumps(c, ensure_ascii=False)), encoding="utf-8")
     try:
